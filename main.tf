@@ -28,7 +28,8 @@ resource "aws_iam_role_policy" "logs_role" {
       "Action": [
         "logs:CreateLogGroup",
         "logs:CreateLogStream",
-        "logs:PutLogEvents"
+        "logs:PutLogEvents",
+        "ec2:DescribeInstances"
       ],
       "Resource": "*"
       "Effect": "Allow"
